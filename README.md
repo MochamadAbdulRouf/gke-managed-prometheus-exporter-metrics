@@ -54,7 +54,7 @@ export ZONE=Zone
 ./prometheus --config.file=documentation/examples/prometheus.yaml --export.label.project-id=$PROJECT_ID --export.label.location=$ZONE
 ```
 
-7. Download and run the node exporter, Run following command here
+7. Open a new tab Cloud Shell, then download and run the node exporter. Run the following command here:
 ```bash
 wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_exporter-1.3.1.linux-amd64.tar.gz
 ```
@@ -68,7 +68,7 @@ cd node_exporter-1.3.1.linux-amd64
  ./node_exporter
 ```
 
-8. Create a configuration file to retrieve metrics from the exporter node.
+8. Return to the first tab, Cloud Shell, and create a configuration file to retrieve metrics from the exporter node.
 ```bash
 vi config.yaml
 ```
