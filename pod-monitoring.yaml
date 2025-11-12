@@ -1,0 +1,17 @@
+apiVersion: monitoring.googleapis.com/v1alpha1
+kind: PodMonitoring
+metadata:
+  # Ini adalah nama dan label Anda sendiri
+  name: monitor-app-saya
+  labels:
+    app.kubernetes.io/name: app-saya
+spec:
+  # Ini adalah selector untuk Pod Anda
+  selector:
+    matchLabels:
+      app: app-saya
+  endpoints:
+    # Port : Nama port (bukan nomor) yang didefinisikan di Pod Spec 
+  - port: metrics
+    # Frekuensi scrape (Data Collection)
+    interval: 30s
