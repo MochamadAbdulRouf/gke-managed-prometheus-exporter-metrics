@@ -101,7 +101,7 @@ gsutil cp config.yaml gs://$PROJECT
 gsutil -m acl set -R -a public-read gs://$PROJECT
 ```
 
-10. Run again promotheus pointing to new configuration file, Run this command
+10. Run again prometheus pointing to new configuration file, Run this command
 ```bash
 ./prometheus --config.file=config.yaml --export.label.project-id=$PROJECT --export.label.location=$ZONE
 ```
